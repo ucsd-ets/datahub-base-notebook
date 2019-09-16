@@ -26,6 +26,15 @@ This image is based on Ubuntu.
 
 # Scripts
 
-* install-ipywidgets.sh
-* install-utilities.sh
-* install-nbresuse.sh
+* install-utilities.sh - install various ubuntu utility packages
+* install-ipywidgets.sh - install ipywidgets
+* install-nbresuse.sh - install custom nbresuse
+* install-nbgrader.sh - install nbgrader and extensions
+* install-nbcluster-status.sh - install cluster status
+
+# Changelog
+
+2019.4.4 (9/16/2019)
+
+* Made `run_jupyter.sh` executable
+

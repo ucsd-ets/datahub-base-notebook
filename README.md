@@ -32,13 +32,3 @@ This image is based on Ubuntu.
 * install-nbgrader.sh - install nbgrader and extensions
 * install-nbcluster-status.sh - install cluster status
 * install-nbgitpuller.sh - install nbgitpuller
-
-# Changelog
-
-2019.4.6 (9/18/2019)
-
-* Added script `install-nbgitpuller.sh` to install nbgitpuller
-
-2019.4.4 (9/16/2019)
-
-* Made `run_jupyter.sh` executable

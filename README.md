@@ -35,7 +35,7 @@ This image is based on Ubuntu.
 
 # Changelog
 
-2019.4.6 (9/6/2019)
+2019.4.6 (9/18/2019)
 
 * Added script `install-nbgitpuller.sh` to install nbgitpuller
 

@@ -35,11 +35,10 @@ This image is based on Ubuntu.
 
 # Changelog
 
-2019.4.5 (9/6/2019)
+2019.4.6 (9/6/2019)
 
 * Added script `install-nbgitpuller.sh` to install nbgitpuller
 
 2019.4.4 (9/16/2019)
 
 * Made `run_jupyter.sh` executable
-

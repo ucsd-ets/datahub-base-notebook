@@ -1,5 +1,5 @@
 #!/bin/sh -x
-conda install nbgrader=0.6.0
+pip install nbgrader==0.6.0
 
 jupyter nbextension install --symlink --sys-prefix --py nbgrader
 jupyter nbextension enable --sys-prefix --py nbgrader

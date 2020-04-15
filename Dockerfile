@@ -1,10 +1,9 @@
-FROM jupyter/base-notebook:hub-1.1.0
+# FROM jupyter/base-notebook:hub-1.1.0
+FROM jupyter/datascience-notebook:hub-1.1.0
 
 USER root
 
 COPY /scripts/*.sh /usr/share/datahub/scripts/
-
-
 COPY /run_jupyter.sh /
 
 RUN /usr/share/datahub/scripts/install-all.sh

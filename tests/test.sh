@@ -1,6 +1,17 @@
 #!/bin/bash
 
-# test libraries are installed
-DATAHUB_BASE_TESTDIR=$TESTDIR/datahub-base-notebook
-jupyter nbconvert --to script "${DATAHUB_BASE_TESTDIR}/datahub_base_notebook.ipynb"
-python3 $DATAHUB_BASE_TESTDIR/datahub_base_notebook.py
+DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
+jupyter nbconvert --to python "${DATASCIENCE_TESTDIR}/datascience_notebook.ipynb"
+
+if ! python3 $DATASCIENCE_TESTDIR/datascience_notebook.py; then
+    exit 1
+fi
+
+# test protobuf
+protoc -I=$DATASCIENCE_TESTDIR --python_out=$DATASCIENCE_TESTDIR $DATASCIENCE_TESTDIR/addressbook.proto
+python3 $DATASCIENCE_TESTDIR/addressbook_pb2.py
+
+# test okpy
+git clone https://github.com/okpy/ok-client.git
+ok -q ok-client/demo/ok_test/q2
+rm -rf ok-client

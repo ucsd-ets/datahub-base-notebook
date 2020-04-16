@@ -13,6 +13,6 @@ ENV TESTDIR=/usr/share/datahub/tests
 ARG DATAHUB_TESTDIR=${TESTDIR}/datahub-base-notebook
 COPY /tests ${DATAHUB_TESTDIR}
 RUN chmod -R +x ${DATAHUB_TESTDIR}
-RUN ${DATAHUB_TESTDIR}/test.sh
+# RUN ${DATAHUB_TESTDIR}/test.sh
 
 USER $NB_UID

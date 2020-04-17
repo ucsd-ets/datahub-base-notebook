@@ -1,3 +1,21 @@
-sut:
+jupyter:
     build: .
-    command: /usr/share/datahub/tests/datahub-base-notebook/run_tests.sh
+    command: /usr/share/datahub/tests/datahub-base-notebook/test.sh
+    # entrypoint:
+    # - jupyter
+    # - notebook
+    # - --NotebookApp.token=''
+    # - --notebook-dir=/usr/share/datahub/tests/datahub-base-notebook
+    ports:
+    - "8889:8888"
+sut:
+    image: elgalu/selenium:3.141
+    volumes:
+    - ./tests:/opt/datahub-base-notebook
+    links:
+    - jupyter
+    command:
+    - python
+    - /opt/datahub-base-notebook/test-ui.py
+
+# reference https://www.digitalocean.com/community/tutorials/how-to-configure-a-continuous-integration-testing-environment-with-docker-and-docker-compose-on-ubuntu-14-04

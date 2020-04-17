@@ -1,9 +1,11 @@
 #!/bin/bash
 
 DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
+ls $DATASCIENCE_TESTDIR
 jupyter nbconvert --to python "${DATASCIENCE_TESTDIR}/datascience_notebook.ipynb"
 
-if ! python3 $DATASCIENCE_TESTDIR/datascience_notebook.py; then
+
+if ! python3 ${DATASCIENCE_TESTDIR}/datascience_notebook.py; then
     exit 1
 fi
 
@@ -15,3 +17,5 @@ python3 $DATASCIENCE_TESTDIR/addressbook_pb2.py
 git clone https://github.com/okpy/ok-client.git
 ok -q ok-client/demo/ok_test/q2
 rm -rf ok-client
+
+jupyter notebook --NotebookApp.token='' --notebook-dir=/usr/share/datahub/tests/datahub-base-notebook

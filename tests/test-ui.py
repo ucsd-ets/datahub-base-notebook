@@ -15,10 +15,10 @@ if __name__ == '__main__':
     # setup the logger
     logger = logging.getLogger('selenium_ui')
     logger.setLevel(logging.INFO)
-    fh = logging.FileHandler('/opt/datahub-base-notebook/ui-test.log')
-    fh.setLevel(logging.INFO)
+    # fh = logging.FileHandler('/opt/datahub-base-notebook/ui-test.log')
+    # fh.setLevel(logging.INFO)
     
-    logger.addHandler(fh)
+    # logger.addHandler(fh)
     
     # initialize the driver options and connect to the notebook
     options = Options()

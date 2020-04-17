@@ -70,14 +70,14 @@ if __name__ == '__main__':
         # check only 1 tab
         assert len(browser.window_handles) == 1
 
-        # check DSMLP cluster status '//*[@id="tabs"]/li[6]/a'
+        logger.info('Checking DSMLP cluster status')
         cluster_status_link = webdriverwait(browser, WAIT_TIME).until(
             ec.presence_of_element_located((by.LINK_TEXT, 'DSMLP Cluster Status'))
         )
         cluster_status_link.click()
         logger.info('DSMLP cluster status ok')
         
-        # check courses tab (nbgrader)
+        logger.info('Checking nbgrader')
         courses_link = webdriverwait(browser, WAIT_TIME).until(
             ec.presence_of_element_located((by.LINK_TEXT, 'Courses'))
         )
@@ -91,6 +91,7 @@ if __name__ == '__main__':
         files_link.click()
         
         # select the new button + create a python notebook
+        logger.info('Checking python notebook')
         new_button = webdriverwait(browser, WAIT_TIME).until(
             ec.element_to_be_clickable((by.ID, 'new-dropdown-button'))
         )
@@ -100,6 +101,7 @@ if __name__ == '__main__':
             ec.element_to_be_clickable((by.LINK_TEXT, 'Python 3'))
         )
         create_py3_notebook.click()
+        logger.info('Python notebook created')
         
         time.sleep(2)
         
@@ -109,6 +111,7 @@ if __name__ == '__main__':
         browser.switch_to.window(notebook)
         
         # check nbresuse
+        logger.info('Checking nbresuse')
         nbresuse_btn = webdriverwait(browser, WAIT_TIME).until(
             ec.element_to_be_clickable((by.XPATH, '//*[@id="collect_metrics"]'))
         )
@@ -116,14 +119,16 @@ if __name__ == '__main__':
         logger.info('nbresuse ok')
         
         # select the quit button
+        logger.info('Checking the quit button')
         file = browser.window_handles[0]
         browser.switch_to.window(file)
         quit_btn = webdriverwait(browser, WAIT_TIME).until(
             ec.element_to_be_clickable((by.ID, 'shutdown'))
         )
         quit_btn.click()
+        logger.info('Exited the notebook server')
         
-        logger.info('UI testing all pass')
+        logger.info('UI testing all pass!')
 
     except Exception as e:
         

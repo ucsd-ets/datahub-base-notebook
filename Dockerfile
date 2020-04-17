@@ -17,4 +17,3 @@ RUN chmod -R +rwx ${DATAHUB_TESTDIR}
 
 USER jovyan
 WORKDIR /home/jovyan
-

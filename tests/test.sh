@@ -1,7 +1,6 @@
 #!/bin/bash
 
 DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
-ls $DATASCIENCE_TESTDIR
 jupyter nbconvert --to python "${DATASCIENCE_TESTDIR}/datascience_notebook.ipynb"
 
 

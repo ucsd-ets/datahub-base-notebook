@@ -1,6 +1,7 @@
 jupyter:
     build: .
-    command: /usr/share/datahub/tests/datahub-base-notebook/test.sh
+    command: bash -c "/usr/share/datahub/tests/datahub-base-notebook/test.sh; jupyter notebook --allow-root --NotebookApp.token=''"
+    user: root
     ports:
     - "8889:8888"
 sut:

@@ -17,5 +17,3 @@ git clone https://github.com/okpy/ok-client.git
 ok -q ok-client/demo/ok_test/q2
 rm -rf ok-client
 
-# start the notebook server for the UI testing
-jupyter notebook --NotebookApp.token='' --notebook-dir=/usr/share/datahub/tests/datahub-base-notebook

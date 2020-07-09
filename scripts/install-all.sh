@@ -5,3 +5,4 @@
 /usr/share/datahub/scripts/install-nbgrader.sh
 /usr/share/datahub/scripts/install-nbcluster-status.sh
 /usr/share/datahub/scripts/install-nbgitpuller.sh
+/usr/share/datahub/scripts/install-nbmessages.sh

@@ -3,7 +3,7 @@ FROM jupyter/datascience-notebook:15a66513da30
 
 USER root
 
-COPY /scripts/*.sh /usr/share/datahub/scripts/
+COPY /scripts /usr/share/datahub/scripts/
 COPY /run_jupyter.sh /
 
 RUN /usr/share/datahub/scripts/install-all.sh

@@ -1,8 +1,6 @@
-#!/bin/sh
-/usr/share/datahub/scripts/install-utilities.sh
-/usr/share/datahub/scripts/install-ipywidgets.sh
-/usr/share/datahub/scripts/install-nbresuse.sh
-/usr/share/datahub/scripts/install-nbgrader.sh
-/usr/share/datahub/scripts/install-nbcluster-status.sh
-/usr/share/datahub/scripts/install-nbgitpuller.sh
-/usr/share/datahub/scripts/install-nbmessages.sh
+#!/bin/bash
+
+
+for f in /usr/share/datahub/scripts/install/*.sh; do
+  bash "$f" -H || break
+done

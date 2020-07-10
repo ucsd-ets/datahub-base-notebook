@@ -1,0 +1,24 @@
+#!/bin/bash
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -f | --docker-repo )    shift
+                                tag=$1
+                                ;;
+        * )                     usage
+                                exit 1
+    esac
+    shift
+done
+
+
+if [ -z ${tag+x} ]
+then
+    echo "add a --docker-repo (i.e. ucsdets/some-repo:latest)"
+    exit 1
+fi
+
+docker-compose -f docker-compose.test.yml build
+docker-compose -f docker-compose.test.yml up --remove-orphans
+docker build --no-cache -t $tag .
+docker push $tag

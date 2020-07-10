@@ -1,7 +1,9 @@
 #!/bin/sh -x
 
-pip install nbmessages==0.0.7
+pip install nbmessages==0.0.8
 
+jupyter nbextension install --symlink --sys-prefix --py nbmessages
+jupyter nbextension enable --sys-prefix --py nbmessages
 jupyter serverextension enable --sys-prefix --py nbmessages
-jupyter nbextension install --sys-prefix --py nbmessages
-jupyter nbextension enable --user message/main --section=tree
+
+jupyter nbextension disable --sys-prefix admin/main --section=tree

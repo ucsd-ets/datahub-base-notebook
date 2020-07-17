@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### Add any non-selenium tests here
+
+# test the datahub-base-notebook.py without opening it as an ipynb notebook
 DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
 jupyter nbconvert --to python "${DATASCIENCE_TESTDIR}/datahub-base-notebook.ipynb"
 

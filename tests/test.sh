@@ -1,9 +1,12 @@
 #!/bin/bash
 
+DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
+
 ### Add any non-selenium tests here
+python3 -m pip install pytest
+pytest $DATASCIENCE_TESTDIR/test-ipykernel_clean.py -v
 
 # test the datahub-base-notebook.py without opening it as an ipynb notebook
-DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
 jupyter nbconvert --to python "${DATASCIENCE_TESTDIR}/datahub-base-notebook.ipynb"
 
 if ! python3 ${DATASCIENCE_TESTDIR}/datahub-base-notebook.py; then

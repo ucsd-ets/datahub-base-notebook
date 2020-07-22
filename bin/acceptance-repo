@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# push/pull acceptance tests into github
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -c | --clone )   shift
+                                clone=1
+                                ;;
+        -r | --reset )   shift
+                                reset=1
+                                ;;
+        -p | --push )    shift
+                                push=$1
+                                ;;
+        -x | --pull )    shift
+                                pull=$1
+                                ;;
+        * )                     exit 1
+    esac
+    shift
+done
+
+PWD=$(pwd)
+
+
+if [ ! -z "${clone}" ]; then
+    cd $PWD/tests
+    git clone https://github.com/ucsd-ets/notebook-acceptance-tests.git
+    cd $PWD
+fi
+
+cd $PWD/tests/notebook-acceptance-tests
+
+if [ ! -z "${reset}" ]; then
+    git reset
+fi
+
+if [ ! -z "${push}" ]; then
+    git add .
+    git status
+
+    while true; do
+        read -n 1 -p "Would you like to commit these changes to $push? [y/n]: " commit
+
+        if [ "$commit" = "y" ]; then
+            git commit
+            git push -u origin $push
+            exit 1
+            # break
+        else
+            exit 1
+        fi
+    done
+fi
+
+if [ ! -z "${pull}" ]; then
+    git pull origin $pull
+fi

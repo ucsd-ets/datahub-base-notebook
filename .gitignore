@@ -1,1 +1,2 @@
 *.log
+tests/notebook-acceptance-tests/

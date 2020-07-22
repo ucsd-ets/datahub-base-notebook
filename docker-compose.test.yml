@@ -7,7 +7,7 @@ jupyter:
 sut:
     image: elgalu/selenium:3.141
     volumes:
-    - ./tests:/opt/datahub-base-notebook
+    - ./tests/notebook-acceptance-tests:/opt/datahub-base-notebook
     user: root
     links:
     - jupyter

@@ -5,12 +5,9 @@ jupyter:
     ports:
     - "8889:8888"
 sut:
-    image: elgalu/selenium:3.141
-    volumes:
-    - ./tests/notebook-acceptance-tests:/opt/datahub-base-notebook
-    user: root
+    image: ucsdets/notebook-tests:latest
     links:
     - jupyter
     command:
     - python
-    - /opt/datahub-base-notebook/test-ui.py
+    - /opt/datahub/test-ui.py

@@ -1,6 +1,6 @@
 # datahub-base-notebook
 
-Base environment used for all standard containers used at UCSD's Data Science and Machine Learning Platform.
+Base environment used for all standard containers used at UCSD's Data Science and Machine Learning Platform. Extra jupyter plugins required by the platform installed here. See scripts/ for a list of all installed plugins.
 
 ## Base Conda Environment
 

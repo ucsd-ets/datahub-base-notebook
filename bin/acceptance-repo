@@ -13,6 +13,9 @@ while [ "$1" != "" ]; do
         -p | --push )    shift
                                 push=$1
                                 ;;
+        -dp | --docker-push ) shift
+                                docker=1
+                                ;;
         -x | --pull )    shift
                                 pull=$1
                                 ;;
@@ -22,12 +25,14 @@ while [ "$1" != "" ]; do
 done
 
 PWD=$(pwd)
+echo $PWD
 
 
 if [ ! -z "${clone}" ]; then
     cd $PWD/tests
     git clone https://github.com/ucsd-ets/notebook-acceptance-tests.git
     cd $PWD
+    exit 1
 fi
 
 cd $PWD/tests/notebook-acceptance-tests
@@ -52,6 +57,12 @@ if [ ! -z "${push}" ]; then
             exit 1
         fi
     done
+fi
+
+if [ ! -z "${docker}" ]; then
+    docker build -t ucsdets/notebook-tests:latest .
+    docker push ucsdets/notebook-tests:latest
+    exit 1
 fi
 
 if [ ! -z "${pull}" ]; then

@@ -13,6 +13,7 @@ apt-get update && \
     tmux \
     screen \
     gnupg \
+    htop \
     wget && \
 	chmod g-s /usr/bin/screen && \
 	chmod 1777 /var/run/screen

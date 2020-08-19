@@ -1,5 +1,4 @@
-#FROM jupyter/datascience-notebook:hub-1.1.0
-FROM jupyter/datascience-notebook:13b866ff67b9
+FROM jupyter/datascience-notebook:python-3.7.6
 
 USER root
 

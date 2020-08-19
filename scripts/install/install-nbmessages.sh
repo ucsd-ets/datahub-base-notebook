@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-pip install nbmessages==0.0.16
+pip install nbmessages==0.0.20
 
 jupyter nbextension install --symlink --sys-prefix --py nbmessages
 jupyter nbextension enable --sys-prefix --py nbmessages

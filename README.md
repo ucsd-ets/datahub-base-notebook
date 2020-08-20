@@ -4,6 +4,9 @@ Base environment used for all standard containers used at UCSD's Data Science an
 
 ## Base Conda Environment
 
+<details>
+  <summary>Click to expand</summary>
+  
 ```yaml
 name: base
 channels:
@@ -429,9 +432,13 @@ dependencies:
     - timeout-decorator==0.4.1
     - toml==0.10.1
 ```
+</details>
 
 ## Pip Packages
 
+<details>
+  <summary>Click to expand</summary>
+  
 ```
 Package                Version            
 ---------------------- -------------------
@@ -619,3 +626,4 @@ yapf                   0.30.0
 zict                   2.0.0              
 zipp                   3.1.0
 ```
+</details>

@@ -4,6 +4,7 @@ USER root
 
 COPY /scripts /usr/share/datahub/scripts/
 COPY /run_jupyter.sh /
+COPY /scripts/export.py /etc/jupyter
 
 RUN /usr/share/datahub/scripts/install-all.sh
 

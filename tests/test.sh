@@ -3,8 +3,8 @@
 DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
 
 ### Add any non-selenium tests here
-pip install nbgrader
-nbgrader export --exporter=export.CanvasExport
+
+nbgrader export --exporter=nbgrader.plugins.export.CanvasExport
 
 # Test that the csv file has the necessary headers for Canvas
 HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"

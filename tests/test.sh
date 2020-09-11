@@ -11,7 +11,10 @@ HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"
 firstline=$(cut -d ',' -f 1,2,3,4,5 grades.csv | head -1)
 
 if ! [ "$firstline" == "$HEADERS" ]; then
-    echo "Not formatted properly"
+    exit 1
+fi
+
+if ! python3 ${DATASCIENCE_TESTDIR}/datahub-base-notebook.py; then
     exit 1
 fi
 

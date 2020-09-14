@@ -9,6 +9,8 @@ RUN /usr/share/datahub/scripts/install-all.sh
 
 RUN pip install pandas --upgrade
 
+RUN cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py
+
 # testing directory
 ENV TESTDIR=/usr/share/datahub/tests
 ARG DATAHUB_TESTDIR=${TESTDIR}/datahub-base-notebook

@@ -1,9 +1,43 @@
-from nbgrader.plugins import ExportPlugin
-from nbgrader.api import MissingEntry
+# Write over the default nbgrader export.py file
+# This way, it will choose the "default" exporter, which
+# is replaced with the Canvas custom exporter
+
+from traitlets import Unicode, List
+
+from .base import BasePlugin
+from ..api import MissingEntry
 
 
-class CanvasExport(ExportPlugin):
-    """Test exporter plugin."""
+class ExportPlugin(BasePlugin):
+    """Base class for export plugins."""
+
+    to = Unicode("", help="destination to export to").tag(config=True)
+
+    student = List([],
+        help="list of students to export").tag(config=True)
+
+    assignment = List([],
+        help="list of assignments to export").tag(config=True)
+
+    def export(self, gradebook):
+        """Export grades to another format.
+
+        This method MUST be implemented by subclasses. Users should be able to
+        pass the ``--to`` flag on the command line, which will set the
+        ``self.to`` variable. By default, this variable will be an empty string,
+        which allows you to specify whatever default you would like.
+
+        Arguments
+        ---------
+        gradebook: :class:`nbgrader.api.Gradebook`
+            An instance of the gradebook
+
+        """
+        raise NotImplementedError
+
+
+class CsvExportPlugin(ExportPlugin):
+    """Export grades to Canvas format"""
         
     def export(self, gradebook):
               

@@ -4,7 +4,7 @@ DATASCIENCE_TESTDIR=$TESTDIR/datahub-base-notebook
 
 ### Add any non-selenium tests here
 
-nbgrader export --exporter=nbgrader.plugins.export.CanvasExport
+nbgrader export
 
 # Test that the csv file has the necessary headers for Canvas
 HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"
@@ -14,9 +14,9 @@ if ! [ "$firstline" == "$HEADERS" ]; then
     exit 1
 fi
 
-if ! python3 ${DATASCIENCE_TESTDIR}/datahub-base-notebook.py; then
-    exit 1
-fi
+# if ! python3 ${DATASCIENCE_TESTDIR}/datahub-base-notebook.py; then
+#     exit 1
+# fi
 
 # # test protobuf
 # protoc -I=$DATASCIENCE_TESTDIR --python_out=$DATASCIENCE_TESTDIR $DATASCIENCE_TESTDIR/addressbook.proto

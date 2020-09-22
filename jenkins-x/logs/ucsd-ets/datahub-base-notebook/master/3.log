@@ -1,0 +1,832 @@
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600798697.9864678,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ucsd-ets-datahub-base-notebook-9rlbl-28ctw[0m
+{"level":"info","ts":1600798707.9578235,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/ucsd-ets/datahub-base-notebook.git @ v2019.4.12 in path /workspace/source"}
+{"level":"warn","ts":1600798707.9583948,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600798708.015141,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0002] Retrieving image manifest jupyter/datascience-notebook:python-3.7.6 
+[36mINFO[0m[0003] Retrieving image manifest jupyter/datascience-notebook:python-3.7.6 
+[36mINFO[0m[0006] Built cross stage deps: map[]                
+[36mINFO[0m[0006] Retrieving image manifest jupyter/datascience-notebook:python-3.7.6 
+[36mINFO[0m[0008] Retrieving image manifest jupyter/datascience-notebook:python-3.7.6 
+[36mINFO[0m[0010] Executing 0 build triggers                   
+[36mINFO[0m[0010] cmd: USER                                    
+[36mINFO[0m[0010] Checking for cached layer *********/todo/cache:0eeebdf9c4b5054a336c7c35ab2a3aac5830172f0efeff68b714e785764d863d... 
+[36mINFO[0m[0013] No cached layer found for cmd COPY /scripts /usr/share/datahub/scripts/ 
+[36mINFO[0m[0013] cmd: USER                                    
+[36mINFO[0m[0013] Unpacking rootfs as cmd COPY /scripts /usr/share/datahub/scripts/ requires it. 
+[36mINFO[0m[0261] USER root                                    
+[36mINFO[0m[0261] cmd: USER                                    
+[36mINFO[0m[0261] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0261] COPY /scripts /usr/share/datahub/scripts/    
+[36mINFO[0m[0261] Resolving 13 paths                           
+[36mINFO[0m[0261] Taking snapshot of files...                  
+[36mINFO[0m[0261] COPY /run_jupyter.sh /                       
+[36mINFO[0m[0261] Resolving 1 paths                            
+[36mINFO[0m[0261] Taking snapshot of files...                  
+[36mINFO[0m[0261] RUN /usr/share/datahub/scripts/install-all.sh 
+[36mINFO[0m[0261] Taking snapshot of full filesystem...        
+[36mINFO[0m[0261] Pushing layer *********/todo/cache:d4074ab3157d3c8d13c7eba631a4f4648250c626795279f429fa6da3642a079b to cache now 
+[36mINFO[0m[0261] Pushing layer *********/todo/cache:0eeebdf9c4b5054a336c7c35ab2a3aac5830172f0efeff68b714e785764d863d to cache now 
+[36mINFO[0m[0263] Resolving 240429 paths                       
+[36mINFO[0m[2018] cmd: /bin/bash                               
+[36mINFO[0m[2018] args: [-o pipefail -c /usr/share/datahub/scripts/install-all.sh] 
+[36mINFO[0m[2018] util.Lookup returned: &{Uid:0 Gid:0 Username:root Name:root HomeDir:/root} 
+[36mINFO[0m[2018] performing slow lookup of group ids for root 
+[36mINFO[0m[2018] Running: [/bin/bash -o pipefail -c /usr/share/datahub/scripts/install-all.sh] 
+Installed kernelspec python3_clean in /opt/conda/share/jupyter/kernels/python3_clean
+Requirement already satisfied: ipywidgets in /opt/conda/lib/python3.7/site-packages (7.5.1)
+Requirement already satisfied: ipython>=4.0.0; python_version >= "3.3" in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (7.15.0)
+Requirement already satisfied: ipykernel>=4.5.1 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (5.3.0)
+Requirement already satisfied: traitlets>=4.3.1 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (4.3.3)
+Requirement already satisfied: nbformat>=4.2.0 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (5.0.6)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (3.5.1)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.2.0)
+Requirement already satisfied: setuptools>=18.5 in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (47.3.1.post20200616)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (2.6.1)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (3.0.5)
+Requirement already satisfied: jedi>=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.17.0)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (4.8.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (4.4.2)
+Requirement already satisfied: tornado>=4.2 in /opt/conda/lib/python3.7/site-packages (from ipykernel>=4.5.1->ipywidgets) (6.0.4)
+Requirement already satisfied: jupyter-client in /opt/conda/lib/python3.7/site-packages (from ipykernel>=4.5.1->ipywidgets) (6.1.3)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.3.1->ipywidgets) (0.2.0)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.3.1->ipywidgets) (1.15.0)
+Requirement already satisfied: jupyter-core in /opt/conda/lib/python3.7/site-packages (from nbformat>=4.2.0->ipywidgets) (4.6.3)
+Requirement already satisfied: jsonschema!=2.5.0,>=2.4 in /opt/conda/lib/python3.7/site-packages (from nbformat>=4.2.0->ipywidgets) (3.2.0)
+Requirement already satisfied: notebook>=4.4.1 in /opt/conda/lib/python3.7/site-packages (from widgetsnbextension~=3.5.0->ipywidgets) (6.0.3)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.2.4)
+Requirement already satisfied: parso>=0.7.0 in /opt/conda/lib/python3.7/site-packages (from jedi>=0.10->ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.7.0)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != "win32"->ipython>=4.0.0; python_version >= "3.3"->ipywidgets) (0.6.0)
+Requirement already satisfied: python-dateutil>=2.1 in /opt/conda/lib/python3.7/site-packages (from jupyter-client->ipykernel>=4.5.1->ipywidgets) (2.8.1)
+Requirement already satisfied: pyzmq>=13 in /opt/conda/lib/python3.7/site-packages (from jupyter-client->ipykernel>=4.5.1->ipywidgets) (19.0.1)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets) (19.3.0)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets) (1.6.1)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets) (0.16.0)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.8.0)
+Requirement already satisfied: terminado>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.8.3)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (2.11.2)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.7/site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (5.6.1)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (1.5.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets) (3.1.0)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (1.1.1)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (1.4.2)
+Requirement already satisfied: entrypoints>=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.3)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.4.4)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (3.1.5)
+Requirement already satisfied: mistune<2,>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.8.4)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.6.0)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (0.5.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (20.4)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets) (2.4.7)
+Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: [32mOK[0m
+Cloning into '/usr/share/datahub/local-env-backup'...
+Processing /usr/share/datahub/local-env-backup
+Collecting pytest
+  Downloading pytest-6.0.2-py3-none-any.whl (270 kB)
+Collecting timeout_decorator
+  Downloading timeout-decorator-0.4.1.tar.gz (4.8 kB)
+Collecting toml
+  Downloading toml-0.10.1-py2.py3-none-any.whl (19 kB)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from pytest->env-backup==0.0.3) (19.3.0)
+Collecting more-itertools>=4.0.0
+  Downloading more_itertools-8.5.0-py3-none-any.whl (44 kB)
+Collecting py>=1.8.2
+  Downloading py-1.9.0-py2.py3-none-any.whl (99 kB)
+Collecting iniconfig
+  Downloading iniconfig-1.0.1-py3-none-any.whl (4.2 kB)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from pytest->env-backup==0.0.3) (20.4)
+Requirement already satisfied: importlib-metadata>=0.12; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from pytest->env-backup==0.0.3) (1.6.1)
+Collecting pluggy<1.0,>=0.12
+  Downloading pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->pytest->env-backup==0.0.3) (2.4.7)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from packaging->pytest->env-backup==0.0.3) (1.15.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata>=0.12; python_version < "3.8"->pytest->env-backup==0.0.3) (3.1.0)
+Building wheels for collected packages: env-backup, timeout-decorator
+  Building wheel for env-backup (setup.py): started
+  Building wheel for env-backup (setup.py): finished with status 'done'
+  Created wheel for env-backup: filename=env_backup-0.0.3-py3-none-any.whl size=6852 sha256=2f778fe1fa11c17f6e456518659898ad44d3ec4aabd1104ae8a90f615d6c5416
+  Stored in directory: /tmp/pip-ephem-wheel-cache-n07kzw1s/wheels/2f/53/b1/61d19c365d356b6ff9022cf020f650a83242c7b3eec23a1bba
+  Building wheel for timeout-decorator (setup.py): started
+  Building wheel for timeout-decorator (setup.py): finished with status 'done'
+  Created wheel for timeout-decorator: filename=timeout_decorator-0.4.1-py3-none-any.whl size=5015 sha256=393224cf2d951bf94b5dbaec52ad3a5e06d726770bfcb6d13aef826e4dd792e8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-n07kzw1s/wheels/d5/a0/87/83fe34960f698558661b71ce991c84a0fd4cb10c56f22eaaa1
+Successfully built env-backup timeout-decorator
+Installing collected packages: toml, more-itertools, py, iniconfig, pluggy, pytest, timeout-decorator, env-backup
+Successfully installed env-backup-0.0.3 iniconfig-1.0.1 more-itertools-8.5.0 pluggy-0.13.1 py-1.9.0 pytest-6.0.2 timeout-decorator-0.4.1 toml-0.10.1
+Collecting git+https://github.com/ucsd-ets/nbcluster-status.git
+  Cloning https://github.com/ucsd-ets/nbcluster-status.git to /tmp/pip-req-build-o9rf11p2
+  Running command git clone -q https://github.com/ucsd-ets/nbcluster-status.git /tmp/pip-req-build-o9rf11p2
+Requirement already satisfied: notebook in /opt/conda/lib/python3.7/site-packages (from nbcluster-status==0.0.0) (6.0.3)
+Collecting bs4
+  Downloading bs4-0.0.1.tar.gz (1.1 kB)
+Collecting lxml
+  Downloading lxml-4.5.2-cp37-cp37m-manylinux1_x86_64.whl (5.5 MB)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (5.6.1)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (2.11.2)
+Requirement already satisfied: nbformat in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (5.0.6)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (0.8.0)
+Requirement already satisfied: ipykernel in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (5.3.0)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (1.5.0)
+Requirement already satisfied: terminado>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (0.8.3)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (0.2.0)
+Requirement already satisfied: tornado>=5.0 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (6.0.4)
+Requirement already satisfied: jupyter-core>=4.6.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (4.6.3)
+Requirement already satisfied: jupyter-client>=5.3.4 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (6.1.3)
+Requirement already satisfied: pyzmq>=17 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (19.0.1)
+Requirement already satisfied: traitlets>=4.2.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbcluster-status==0.0.0) (4.3.3)
+Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.7/site-packages (from bs4->nbcluster-status==0.0.0) (4.9.1)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (1.4.2)
+Requirement already satisfied: entrypoints>=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (0.3)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (0.4.4)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (0.6.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (2.6.1)
+Requirement already satisfied: mistune<2,>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (0.8.4)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbcluster-status==0.0.0) (3.1.5)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2->notebook->nbcluster-status==0.0.0) (1.1.1)
+Requirement already satisfied: jsonschema!=2.5.0,>=2.4 in /opt/conda/lib/python3.7/site-packages (from nbformat->notebook->nbcluster-status==0.0.0) (3.2.0)
+Requirement already satisfied: ipython>=5.0.0 in /opt/conda/lib/python3.7/site-packages (from ipykernel->notebook->nbcluster-status==0.0.0) (7.15.0)
+Requirement already satisfied: python-dateutil>=2.1 in /opt/conda/lib/python3.7/site-packages (from jupyter-client>=5.3.4->notebook->nbcluster-status==0.0.0) (2.8.1)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook->nbcluster-status==0.0.0) (1.15.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook->nbcluster-status==0.0.0) (4.4.2)
+Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.7/site-packages (from beautifulsoup4->bs4->nbcluster-status==0.0.0) (2.0.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook->nbcluster-status==0.0.0) (20.4)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook->nbcluster-status==0.0.0) (0.5.1)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbcluster-status==0.0.0) (47.3.1.post20200616)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbcluster-status==0.0.0) (1.6.1)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbcluster-status==0.0.0) (0.16.0)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbcluster-status==0.0.0) (19.3.0)
+Requirement already satisfied: jedi>=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.17.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (3.0.5)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (4.8.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.2.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.7.5)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->bleach->nbconvert->notebook->nbcluster-status==0.0.0) (2.4.7)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbcluster-status==0.0.0) (3.1.0)
+Requirement already satisfied: parso>=0.7.0 in /opt/conda/lib/python3.7/site-packages (from jedi>=0.10->ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.2.4)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != "win32"->ipython>=5.0.0->ipykernel->notebook->nbcluster-status==0.0.0) (0.6.0)
+Building wheels for collected packages: nbcluster-status, bs4
+  Building wheel for nbcluster-status (setup.py): started
+  Building wheel for nbcluster-status (setup.py): finished with status 'done'
+  Created wheel for nbcluster-status: filename=nbcluster_status-0.0.0-py3-none-any.whl size=139685 sha256=34c5ff88f7f7f08af3fc62977f47b984a0184a71649cc3e742206edbd3f132c5
+  Stored in directory: /tmp/pip-ephem-wheel-cache-a06cckvm/wheels/86/d8/9c/8bda1f29c7d16c2075149c4a0a0044c3a23db53dc9117e02a7
+  Building wheel for bs4 (setup.py): started
+  Building wheel for bs4 (setup.py): finished with status 'done'
+  Created wheel for bs4: filename=bs4-0.0.1-py3-none-any.whl size=1272 sha256=e79a968b10f754d9506a13776b6a3ec2695385e2a40b1f1f3eed22f7cae321d3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-a06cckvm/wheels/0a/9e/ba/20e5bbc1afef3a491f0b3bb74d508f99403aabe76eda2167ca
+Successfully built nbcluster-status bs4
+Installing collected packages: bs4, lxml, nbcluster-status
+Successfully installed bs4-0.0.1 lxml-4.5.2 nbcluster-status-0.0.0
+Enabling: nbcluster_status
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbcluster_status  [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbcluster_status/static -> nbcluster_status
+Making directory: /opt/conda/share/jupyter/nbextensions/nbcluster_status/
+Copying: /opt/conda/lib/python3.7/site-packages/nbcluster_status/static/histo.js -> /opt/conda/share/jupyter/nbextensions/nbcluster_status/histo.js
+Copying: /opt/conda/lib/python3.7/site-packages/nbcluster_status/static/line.js -> /opt/conda/share/jupyter/nbextensions/nbcluster_status/line.js
+Copying: /opt/conda/lib/python3.7/site-packages/nbcluster_status/static/main.js -> /opt/conda/share/jupyter/nbextensions/nbcluster_status/main.js
+Copying: /opt/conda/lib/python3.7/site-packages/nbcluster_status/static/Chart.js -> /opt/conda/share/jupyter/nbextensions/nbcluster_status/Chart.js
+- Validating: [32mOK[0m
+
+    To initialize this nbextension in the browser every time the notebook (or other app) loads:
+    
+          jupyter nbextension enable nbcluster_status --py --sys-prefix
+    
+Enabling tree extension nbcluster_status/main...
+      - Validating: [32mOK[0m
+WARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting git+https://github.com/data-8/gitautosync
+  Cloning https://github.com/data-8/gitautosync to /tmp/pip-req-build-aqiycnn3
+  Running command git clone -q https://github.com/data-8/gitautosync /tmp/pip-req-build-aqiycnn3
+Requirement already satisfied: notebook>=5.5.0 in /opt/conda/lib/python3.7/site-packages (from nbgitpuller==0.9.0.dev0) (6.0.3)
+Requirement already satisfied: tornado in /opt/conda/lib/python3.7/site-packages (from nbgitpuller==0.9.0.dev0) (6.0.4)
+Requirement already satisfied: jupyter-client>=5.3.4 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (6.1.3)
+Requirement already satisfied: ipykernel in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (5.3.0)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (2.11.2)
+Requirement already satisfied: traitlets>=4.2.1 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (4.3.3)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.2.0)
+Requirement already satisfied: jupyter-core>=4.6.1 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (4.6.3)
+Requirement already satisfied: terminado>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.8.3)
+Requirement already satisfied: pyzmq>=17 in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (19.0.1)
+Requirement already satisfied: nbformat in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (5.0.6)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (5.6.1)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.8.0)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (1.5.0)
+Requirement already satisfied: python-dateutil>=2.1 in /opt/conda/lib/python3.7/site-packages (from jupyter-client>=5.3.4->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (2.8.1)
+Requirement already satisfied: ipython>=5.0.0 in /opt/conda/lib/python3.7/site-packages (from ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (7.15.0)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (1.1.1)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (4.4.2)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (1.15.0)
+Requirement already satisfied: jsonschema!=2.5.0,>=2.4 in /opt/conda/lib/python3.7/site-packages (from nbformat->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (3.2.0)
+Requirement already satisfied: entrypoints>=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.3)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.6.0)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.4.4)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (3.1.5)
+Requirement already satisfied: mistune<2,>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.8.4)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (2.6.1)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (1.4.2)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.7.5)
+Requirement already satisfied: setuptools>=18.5 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (47.3.1.post20200616)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (4.8.0)
+Requirement already satisfied: jedi>=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.17.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.2.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (3.0.5)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (19.3.0)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.16.0)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (1.6.1)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.5.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (20.4)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != "win32"->ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.6.0)
+Requirement already satisfied: parso>=0.7.0 in /opt/conda/lib/python3.7/site-packages (from jedi>=0.10->ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=5.0.0->ipykernel->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (0.2.4)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->jsonschema!=2.5.0,>=2.4->nbformat->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (3.1.0)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->bleach->nbconvert->notebook>=5.5.0->nbgitpuller==0.9.0.dev0) (2.4.7)
+Building wheels for collected packages: nbgitpuller
+  Building wheel for nbgitpuller (setup.py): started
+  Building wheel for nbgitpuller (setup.py): finished with status 'done'
+  Created wheel for nbgitpuller: filename=nbgitpuller-0.9.0.dev0-py2.py3-none-any.whl size=14881 sha256=129b6654fa5d2c84bb2aae2520e2d162d8a1f57605f66a83b1100bf61ec33ed2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_bg3nx5i/wheels/af/0c/3d/7456ae58e99392749398e2538798378a180746dc5467ad518d
+Successfully built nbgitpuller
+Installing collected packages: nbgitpuller
+Successfully installed nbgitpuller-0.9.0.dev0
+Enabling: nbgitpuller
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbgitpuller 0.9.0dev0 [32mOK[0m
+WARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting nbgrader==0.6.0
+  Downloading nbgrader-0.6.0.tar.gz (13.3 MB)
+Requirement already satisfied: sqlalchemy in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (1.3.17)
+Requirement already satisfied: python-dateutil in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (2.8.1)
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Requirement already satisfied: notebook>=4.2 in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (6.0.3)
+Requirement already satisfied: nbconvert>=5.6 in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (5.6.1)
+Requirement already satisfied: nbformat in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (5.0.6)
+Requirement already satisfied: traitlets in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (4.3.3)
+Requirement already satisfied: jupyter_core in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (4.6.3)
+Requirement already satisfied: jupyter_client in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (6.1.3)
+Requirement already satisfied: tornado in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (6.0.4)
+Requirement already satisfied: six>=1.11 in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (1.15.0)
+Requirement already satisfied: requests in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (2.24.0)
+Requirement already satisfied: jsonschema in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (3.2.0)
+Requirement already satisfied: alembic in /opt/conda/lib/python3.7/site-packages (from nbgrader==0.6.0) (1.4.2)
+Collecting fuzzywuzzy
+  Downloading fuzzywuzzy-0.18.0-py2.py3-none-any.whl (18 kB)
+Collecting jupyter-console
+  Downloading jupyter_console-6.2.0-py3-none-any.whl (22 kB)
+Requirement already satisfied: ipywidgets in /opt/conda/lib/python3.7/site-packages (from jupyter->nbgrader==0.6.0) (7.5.1)
+Requirement already satisfied: ipykernel in /opt/conda/lib/python3.7/site-packages (from jupyter->nbgrader==0.6.0) (5.3.0)
+Collecting qtconsole
+  Downloading qtconsole-4.7.7-py2.py3-none-any.whl (118 kB)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (0.2.0)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (1.5.0)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (2.11.2)
+Requirement already satisfied: terminado>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (0.8.3)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (0.8.0)
+Requirement already satisfied: pyzmq>=17 in /opt/conda/lib/python3.7/site-packages (from notebook>=4.2->nbgrader==0.6.0) (19.0.1)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (2.6.1)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (1.4.2)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (3.1.5)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (0.6.0)
+Requirement already satisfied: entrypoints>=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (0.3)
+Requirement already satisfied: mistune<2,>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (0.8.4)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert>=5.6->nbgrader==0.6.0) (0.4.4)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from traitlets->nbgrader==0.6.0) (4.4.2)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.7/site-packages (from requests->nbgrader==0.6.0) (1.25.9)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.7/site-packages (from requests->nbgrader==0.6.0) (2020.4.5.2)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.7/site-packages (from requests->nbgrader==0.6.0) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.7/site-packages (from requests->nbgrader==0.6.0) (2.9)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from jsonschema->nbgrader==0.6.0) (1.6.1)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema->nbgrader==0.6.0) (0.16.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.7/site-packages (from jsonschema->nbgrader==0.6.0) (47.3.1.post20200616)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema->nbgrader==0.6.0) (19.3.0)
+Requirement already satisfied: Mako in /opt/conda/lib/python3.7/site-packages (from alembic->nbgrader==0.6.0) (1.1.0)
+Requirement already satisfied: python-editor>=0.3 in /opt/conda/lib/python3.7/site-packages (from alembic->nbgrader==0.6.0) (1.0.4)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from jupyter-console->jupyter->nbgrader==0.6.0) (3.0.5)
+Requirement already satisfied: ipython in /opt/conda/lib/python3.7/site-packages (from jupyter-console->jupyter->nbgrader==0.6.0) (7.15.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /opt/conda/lib/python3.7/site-packages (from ipywidgets->jupyter->nbgrader==0.6.0) (3.5.1)
+Collecting qtpy
+  Downloading QtPy-1.9.0-py2.py3-none-any.whl (54 kB)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2->notebook>=4.2->nbgrader==0.6.0) (1.1.1)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert>=5.6->nbgrader==0.6.0) (0.5.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert>=5.6->nbgrader==0.6.0) (20.4)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->jsonschema->nbgrader==0.6.0) (3.1.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->jupyter-console->jupyter->nbgrader==0.6.0) (0.2.4)
+Requirement already satisfied: jedi>=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython->jupyter-console->jupyter->nbgrader==0.6.0) (0.17.0)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /opt/conda/lib/python3.7/site-packages (from ipython->jupyter-console->jupyter->nbgrader==0.6.0) (4.8.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython->jupyter-console->jupyter->nbgrader==0.6.0) (0.2.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython->jupyter-console->jupyter->nbgrader==0.6.0) (0.7.5)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->bleach->nbconvert>=5.6->nbgrader==0.6.0) (2.4.7)
+Requirement already satisfied: parso>=0.7.0 in /opt/conda/lib/python3.7/site-packages (from jedi>=0.10->ipython->jupyter-console->jupyter->nbgrader==0.6.0) (0.7.0)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != "win32"->ipython->jupyter-console->jupyter->nbgrader==0.6.0) (0.6.0)
+Building wheels for collected packages: nbgrader
+  Building wheel for nbgrader (setup.py): started
+  Building wheel for nbgrader (setup.py): finished with status 'done'
+  Created wheel for nbgrader: filename=nbgrader-0.6.0-py3-none-any.whl size=13505299 sha256=b7ad55a3d80e64990b4da2b06df7eba2b3a152384cfd772679edb3c911b11332
+  Stored in directory: /tmp/pip-ephem-wheel-cache-u7qs7q0s/wheels/8e/db/f6/3a606cc2d07dda6563a56c405ca3ac91317a8dcec875a9a475
+Successfully built nbgrader
+Installing collected packages: jupyter-console, qtpy, qtconsole, jupyter, fuzzywuzzy, nbgrader
+Successfully installed fuzzywuzzy-0.18.0 jupyter-1.0.0 jupyter-console-6.2.0 nbgrader-0.6.0 qtconsole-4.7.7 qtpy-1.9.0
+Installing /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/create_assignment -> create_assignment
+Symlinking: /opt/conda/share/jupyter/nbextensions/create_assignment -> /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/create_assignment
+- Validating: [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/formgrader -> formgrader
+Symlinking: /opt/conda/share/jupyter/nbextensions/formgrader -> /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/formgrader
+- Validating: [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/validate_assignment -> validate_assignment
+Symlinking: /opt/conda/share/jupyter/nbextensions/validate_assignment -> /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/validate_assignment
+- Validating: [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/assignment_list -> assignment_list
+Symlinking: /opt/conda/share/jupyter/nbextensions/assignment_list -> /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/assignment_list
+- Validating: [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/course_list -> course_list
+Symlinking: /opt/conda/share/jupyter/nbextensions/course_list -> /opt/conda/lib/python3.7/site-packages/nbgrader/nbextensions/course_list
+- Validating: [32mOK[0m
+
+    To initialize this nbextension in the browser every time the notebook (or other app) loads:
+    
+          jupyter nbextension enable nbgrader --py --sys-prefix
+    
+Enabling notebook extension create_assignment/main...
+      - Validating: [32mOK[0m
+Enabling tree extension formgrader/main...
+      - Validating: [32mOK[0m
+Enabling notebook extension validate_assignment/main...
+      - Validating: [32mOK[0m
+Enabling tree extension assignment_list/main...
+      - Validating: [32mOK[0m
+Enabling tree extension course_list/main...
+      - Validating: [32mOK[0m
+Enabling: nbgrader.server_extensions.formgrader
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbgrader.server_extensions.formgrader  [32mOK[0m
+Enabling: nbgrader.server_extensions.validate_assignment
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbgrader.server_extensions.validate_assignment  [32mOK[0m
+Enabling: nbgrader.server_extensions.assignment_list
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbgrader.server_extensions.assignment_list  [32mOK[0m
+Enabling: nbgrader.server_extensions.course_list
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbgrader.server_extensions.course_list  [32mOK[0m
+Disabling tree extension formgrader/main...
+      - Validating: [32mOK[0m
+Disabling: nbgrader.server_extensions.formgrader
+- Writing config: /opt/conda/etc/jupyter
+Disabling notebook extension create_assignment/main...
+      - Validating: [32mOK[0m
+WARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting nbmessages==0.0.24
+  Downloading nbmessages-0.0.24-py3-none-any.whl (49 kB)
+Collecting oo-tools==0.2.0
+  Downloading oo_tools-0.2.0-py3-none-any.whl (5.6 kB)
+Collecting markdown
+  Downloading Markdown-3.2.2-py3-none-any.whl (88 kB)
+Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.7/site-packages (from nbmessages==0.0.24) (4.9.1)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.7/site-packages (from nbmessages==0.0.24) (5.3.1)
+Requirement already satisfied: requests in /opt/conda/lib/python3.7/site-packages (from oo-tools==0.2.0->nbmessages==0.0.24) (2.24.0)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from markdown->nbmessages==0.0.24) (1.6.1)
+Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.7/site-packages (from beautifulsoup4->nbmessages==0.0.24) (2.0.1)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.7/site-packages (from requests->oo-tools==0.2.0->nbmessages==0.0.24) (3.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.7/site-packages (from requests->oo-tools==0.2.0->nbmessages==0.0.24) (2020.4.5.2)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.7/site-packages (from requests->oo-tools==0.2.0->nbmessages==0.0.24) (1.25.9)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.7/site-packages (from requests->oo-tools==0.2.0->nbmessages==0.0.24) (2.9)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->markdown->nbmessages==0.0.24) (3.1.0)
+Installing collected packages: oo-tools, markdown, nbmessages
+Successfully installed markdown-3.2.2 nbmessages-0.0.24 oo-tools-0.2.0
+Installing /opt/conda/lib/python3.7/site-packages/nbmessages/nbextensions/message -> message
+Symlinking: /opt/conda/share/jupyter/nbextensions/message -> /opt/conda/lib/python3.7/site-packages/nbmessages/nbextensions/message
+- Validating: [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbmessages/nbextensions/***** -> *****
+Symlinking: /opt/conda/share/jupyter/nbextensions/***** -> /opt/conda/lib/python3.7/site-packages/nbmessages/nbextensions/*****
+- Validating: [32mOK[0m
+
+    To initialize this nbextension in the browser every time the notebook (or other app) loads:
+    
+          jupyter nbextension enable nbmessages --py --sys-prefix
+    
+Enabling tree extension message/main...
+      - Validating: [32mOK[0m
+Enabling tree extension *****/main...
+      - Validating: [32mOK[0m
+Enabling: nbmessages.extensions.message
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbmessages.extensions.message  [32mOK[0m
+Enabling: nbmessages.extensions.*****
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbmessages.extensions.*****  [32mOK[0m
+Disabling tree extension *****/main...
+      - Validating: [32mOK[0m
+Enabling tree extension message/main...
+      - Validating: [32mOK[0m
+Collecting git+https://github.com/ucsd-ets/nbresuse.git
+  Cloning https://github.com/ucsd-ets/nbresuse.git to /tmp/pip-req-build-vekzuvm7
+  Running command git clone -q https://github.com/ucsd-ets/nbresuse.git /tmp/pip-req-build-vekzuvm7
+Requirement already satisfied: psutil in /opt/conda/lib/python3.7/site-packages (from nbresuse==0.2.0) (5.7.0)
+Requirement already satisfied: notebook in /opt/conda/lib/python3.7/site-packages (from nbresuse==0.2.0) (6.0.3)
+Collecting gputil
+  Downloading GPUtil-1.4.0.tar.gz (5.5 kB)
+Requirement already satisfied: jupyter-client>=5.3.4 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (6.1.3)
+Requirement already satisfied: tornado>=5.0 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (6.0.4)
+Requirement already satisfied: pyzmq>=17 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (19.0.1)
+Requirement already satisfied: ipykernel in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (5.3.0)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (5.6.1)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (1.5.0)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (0.2.0)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (2.11.2)
+Requirement already satisfied: jupyter-core>=4.6.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (4.6.3)
+Requirement already satisfied: traitlets>=4.2.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (4.3.3)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (0.8.0)
+Requirement already satisfied: nbformat in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (5.0.6)
+Requirement already satisfied: terminado>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook->nbresuse==0.2.0) (0.8.3)
+Requirement already satisfied: python-dateutil>=2.1 in /opt/conda/lib/python3.7/site-packages (from jupyter-client>=5.3.4->notebook->nbresuse==0.2.0) (2.8.1)
+Requirement already satisfied: ipython>=5.0.0 in /opt/conda/lib/python3.7/site-packages (from ipykernel->notebook->nbresuse==0.2.0) (7.15.0)
+Requirement already satisfied: mistune<2,>=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (0.8.4)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (0.4.4)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (3.1.5)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (0.6.0)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (1.4.2)
+Requirement already satisfied: entrypoints>=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (0.3)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from nbconvert->notebook->nbresuse==0.2.0) (2.6.1)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2->notebook->nbresuse==0.2.0) (1.1.1)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook->nbresuse==0.2.0) (4.4.2)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from traitlets>=4.2.1->notebook->nbresuse==0.2.0) (1.15.0)
+Requirement already satisfied: jsonschema!=2.5.0,>=2.4 in /opt/conda/lib/python3.7/site-packages (from nbformat->notebook->nbresuse==0.2.0) (3.2.0)
+Requirement already satisfied: setuptools>=18.5 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (47.3.1.post20200616)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.7.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.2.0)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (4.8.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (3.0.5)
+Requirement already satisfied: jedi>=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.17.0)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook->nbresuse==0.2.0) (0.5.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.7/site-packages (from bleach->nbconvert->notebook->nbresuse==0.2.0) (20.4)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbresuse==0.2.0) (0.16.0)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbresuse==0.2.0) (1.6.1)
+Requirement already satisfied: attrs>=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbresuse==0.2.0) (19.3.0)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != "win32"->ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.6.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.2.4)
+Requirement already satisfied: parso>=0.7.0 in /opt/conda/lib/python3.7/site-packages (from jedi>=0.10->ipython>=5.0.0->ipykernel->notebook->nbresuse==0.2.0) (0.7.0)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.7/site-packages (from packaging->bleach->nbconvert->notebook->nbresuse==0.2.0) (2.4.7)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version < "3.8"->jsonschema!=2.5.0,>=2.4->nbformat->notebook->nbresuse==0.2.0) (3.1.0)
+Building wheels for collected packages: nbresuse, gputil
+  Building wheel for nbresuse (setup.py): started
+  Building wheel for nbresuse (setup.py): finished with status 'done'
+  Created wheel for nbresuse: filename=nbresuse-0.2.0-py3-none-any.whl size=7369 sha256=d05d4c241ed3c534e5b644c0aee2a64920c9492b146f469a2fe29c648ee66ed6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k_hfaz55/wheels/a7/7b/9e/3078511771210c98fe6009b81204ef9a17f72f02d1daa67a1b
+  Building wheel for gputil (setup.py): started
+  Building wheel for gputil (setup.py): finished with status 'done'
+  Created wheel for gputil: filename=GPUtil-1.4.0-py3-none-any.whl size=7411 sha256=08d7f2c04f665f79998eb1e78fa08b62eb6024f58aa76b0387330c77f54c427d
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k_hfaz55/wheels/6e/f8/83/534c52482d6da64622ddbf72cd93c35d2ef2881b78fd08ff0c
+Successfully built nbresuse gputil
+Installing collected packages: gputil, nbresuse
+Successfully installed gputil-1.4.0 nbresuse-0.2.0
+Enabling: nbresuse
+- Writing config: /opt/conda/etc/jupyter
+    - Validating...
+      nbresuse  [32mOK[0m
+Installing /opt/conda/lib/python3.7/site-packages/nbresuse/static -> nbresuse
+Making directory: /opt/conda/share/jupyter/nbextensions/nbresuse/
+Copying: /opt/conda/lib/python3.7/site-packages/nbresuse/static/main.js -> /opt/conda/share/jupyter/nbextensions/nbresuse/main.js
+- Validating: [32mOK[0m
+
+    To initialize this nbextension in the browser every time the notebook (or other app) loads:
+    
+          jupyter nbextension enable nbresuse --py --sys-prefix
+    
+Enabling notebook extension nbresuse/main...
+      - Validating: [32mOK[0m
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1,078 B]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [245 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [51.0 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [71.6 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1,275 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [60.8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [17.3 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [480 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [211 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3,195 B]
+Fetched 14.6 MB in 4s (3,857 kB/s)
+Reading package lists...
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150298 files and directories currently installed.)
+Preparing to unpack .../00-python3.8_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking python3.8 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1.1) ...
+Preparing to unpack .../01-libpython3.8-stdlib_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1.1) ...
+Preparing to unpack .../02-python3.8-minimal_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking python3.8-minimal (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1.1) ...
+Preparing to unpack .../03-libpython3.8-minimal_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.2-1ubuntu1.2) over (3.8.2-1ubuntu1.1) ...
+Selecting previously unselected package rsync.
+Preparing to unpack .../04-rsync_3.1.3-8_amd64.deb ...
+Unpacking rsync (3.1.3-8) ...
+Selecting previously unselected package less.
+Preparing to unpack .../05-less_551-1ubuntu0.1_amd64.deb ...
+Unpacking less (551-1ubuntu0.1) ...
+Selecting previously unselected package libcbor0.6:amd64.
+Preparing to unpack .../06-libcbor0.6_0.6.0-0ubuntu1_amd64.deb ...
+Unpacking libcbor0.6:amd64 (0.6.0-0ubuntu1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../07-libfido2-1_1.3.1-1ubuntu2_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.3.1-1ubuntu2) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../08-libuv1_1.34.2-1ubuntu1_amd64.deb ...
+Unpacking libuv1:amd64 (1.34.2-1ubuntu1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../09-libxmuu1_2%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-0ubuntu1) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../10-openssh-client_1%3a8.2p1-4ubuntu0.1_amd64.deb ...
+Unpacking openssh-client (1:8.2p1-4ubuntu0.1) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../11-xauth_1%3a1.1-0ubuntu1_amd64.deb ...
+Unpacking xauth (1:1.1-0ubuntu1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../12-cmake-data_3.16.3-1ubuntu1_all.deb ...
+Unpacking cmake-data (3.16.3-1ubuntu1) ...
+Selecting previously unselected package libarchive13:amd64.
+Preparing to unpack .../13-libarchive13_3.4.0-2ubuntu1_amd64.deb ...
+Unpacking libarchive13:amd64 (3.4.0-2ubuntu1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../14-libcurl4_7.68.0-1ubuntu2.2_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.2) ...
+Selecting previously unselected package libjsoncpp1:amd64.
+Preparing to unpack .../15-libjsoncpp1_1.7.4-3.1ubuntu2_amd64.deb ...
+Unpacking libjsoncpp1:amd64 (1.7.4-3.1ubuntu2) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../16-librhash0_1.3.9-1_amd64.deb ...
+Unpacking librhash0:amd64 (1.3.9-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../17-cmake_3.16.3-1ubuntu1_amd64.deb ...
+Unpacking cmake (3.16.3-1ubuntu1) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../18-curl_7.68.0-1ubuntu2.2_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.2) ...
+Selecting previously unselected package libassuan0:amd64.
+Preparing to unpack .../19-libassuan0_2.5.3-7ubuntu2_amd64.deb ...
+Unpacking libassuan0:amd64 (2.5.3-7ubuntu2) ...
+Selecting previously unselected package gpgconf.
+Preparing to unpack .../20-gpgconf_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpgconf (2.2.19-3ubuntu2) ...
+Selecting previously unselected package libksba8:amd64.
+Preparing to unpack .../21-libksba8_1.3.5-2_amd64.deb ...
+Unpacking libksba8:amd64 (1.3.5-2) ...
+Selecting previously unselected package libnpth0:amd64.
+Preparing to unpack .../22-libnpth0_1.6-1_amd64.deb ...
+Unpacking libnpth0:amd64 (1.6-1) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../23-dirmngr_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking dirmngr (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gnupg-l10n.
+Preparing to unpack .../24-gnupg-l10n_2.2.19-3ubuntu2_all.deb ...
+Unpacking gnupg-l10n (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gnupg-utils.
+Preparing to unpack .../25-gnupg-utils_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gnupg-utils (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gpg.
+Preparing to unpack .../26-gpg_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpg (2.2.19-3ubuntu2) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../27-pinentry-curses_1.1.0-3build1_amd64.deb ...
+Unpacking pinentry-curses (1.1.0-3build1) ...
+Selecting previously unselected package gpg-agent.
+Preparing to unpack .../28-gpg-agent_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpg-agent (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gpg-wks-client.
+Preparing to unpack .../29-gpg-wks-client_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpg-wks-client (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gpg-wks-server.
+Preparing to unpack .../30-gpg-wks-server_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpg-wks-server (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gpgsm.
+Preparing to unpack .../31-gpgsm_2.2.19-3ubuntu2_amd64.deb ...
+Unpacking gpgsm (2.2.19-3ubuntu2) ...
+Selecting previously unselected package gnupg.
+Preparing to unpack .../32-gnupg_2.2.19-3ubuntu2_all.deb ...
+Unpacking gnupg (2.2.19-3ubuntu2) ...
+Selecting previously unselected package htop.
+Preparing to unpack .../33-htop_2.2.0-2build1_amd64.deb ...
+Unpacking htop (2.2.0-2build1) ...
+Selecting previously unselected package libtdb1:amd64.
+Preparing to unpack .../34-libtdb1_1.4.2-3build1_amd64.deb ...
+Unpacking libtdb1:amd64 (1.4.2-3build1) ...
+Selecting previously unselected package sound-theme-freedesktop.
+Preparing to unpack .../35-sound-theme-freedesktop_0.8-2ubuntu1_all.deb ...
+Unpacking sound-theme-freedesktop (0.8-2ubuntu1) ...
+Selecting previously unselected package libcanberra0:amd64.
+Preparing to unpack .../36-libcanberra0_0.30-7ubuntu1_amd64.deb ...
+Unpacking libcanberra0:amd64 (0.30-7ubuntu1) ...
+Selecting previously unselected package libevent-2.1-7:amd64.
+Preparing to unpack .../37-libevent-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libpython3.8:amd64.
+Preparing to unpack .../38-libpython3.8_3.8.2-1ubuntu1.2_amd64.deb ...
+Unpacking libpython3.8:amd64 (3.8.2-1ubuntu1.2) ...
+Selecting previously unselected package libutempter0:amd64.
+Preparing to unpack .../39-libutempter0_1.1.6-4_amd64.deb ...
+Unpacking libutempter0:amd64 (1.1.6-4) ...
+Selecting previously unselected package screen.
+Preparing to unpack .../40-screen_4.8.0-1_amd64.deb ...
+Unpacking screen (4.8.0-1) ...
+Selecting previously unselected package tmux.
+Preparing to unpack .../41-tmux_3.0a-2ubuntu0.1_amd64.deb ...
+Unpacking tmux (3.0a-2ubuntu0.1) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../42-vim-runtime_2%3a8.1.2269-1ubuntu5_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.2269-1ubuntu5) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../43-vim_2%3a8.1.2269-1ubuntu5_amd64.deb ...
+Unpacking vim (2:8.1.2269-1ubuntu5) ...
+Setting up libksba8:amd64 (1.3.5-2) ...
+Setting up libpython3.8-minimal:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up libarchive13:amd64 (3.4.0-2ubuntu1) ...
+Setting up htop (2.2.0-2build1) ...
+Setting up libtdb1:amd64 (1.4.2-3build1) ...
+Setting up less (551-1ubuntu0.1) ...
+Setting up libnpth0:amd64 (1.6-1) ...
+Setting up libassuan0:amd64 (2.5.3-7ubuntu2) ...
+Setting up libcbor0.6:amd64 (0.6.0-0ubuntu1) ...
+Setting up libuv1:amd64 (1.34.2-1ubuntu1) ...
+Setting up gnupg-l10n (2.2.19-3ubuntu2) ...
+Setting up libevent-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up libutempter0:amd64 (1.1.6-4) ...
+Setting up python3.8-minimal (3.8.2-1ubuntu1.2) ...
+Setting up sound-theme-freedesktop (0.8-2ubuntu1) ...
+Setting up librhash0:amd64 (1.3.9-1) ...
+Setting up gpgconf (2.2.19-3ubuntu2) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.2) ...
+Setting up cmake-data (3.16.3-1ubuntu1) ...
+Install cmake-data for emacs
+Setting up curl (7.68.0-1ubuntu2.2) ...
+Setting up vim-runtime (2:8.1.2269-1ubuntu5) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up libfido2-1:amd64 (1.3.1-1ubuntu2) ...
+Setting up python3.8 (3.8.2-1ubuntu1.2) ...
+Setting up tmux (3.0a-2ubuntu0.1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-0ubuntu1) ...
+Setting up gpg (2.2.19-3ubuntu2) ...
+Setting up rsync (3.1.3-8) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libjsoncpp1:amd64 (1.7.4-3.1ubuntu2) ...
+Setting up gnupg-utils (2.2.19-3ubuntu2) ...
+Setting up pinentry-curses (1.1.0-3build1) ...
+Setting up libcanberra0:amd64 (0.30-7ubuntu1) ...
+Setting up gpg-agent (2.2.19-3ubuntu2) ...
+Setting up openssh-client (1:8.2p1-4ubuntu0.1) ...
+Setting up gpgsm (2.2.19-3ubuntu2) ...
+Setting up screen (4.8.0-1) ...
+Setting up dirmngr (2.2.19-3ubuntu2) ...
+Setting up libpython3.8:amd64 (3.8.2-1ubuntu1.2) ...
+Setting up gpg-wks-server (2.2.19-3ubuntu2) ...
+Setting up xauth (1:1.1-0ubuntu1) ...
+Setting up cmake (3.16.3-1ubuntu1) ...
+Setting up vim (2:8.1.2269-1ubuntu5) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+Setting up gpg-wks-client (2.2.19-3ubuntu2) ...
+Setting up gnupg (2.2.19-3ubuntu2) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+chmod: cannot access '/var/run/screen': No such file or directory
+[36mINFO[0m[2122] Taking snapshot of full filesystem...        
+[36mINFO[0m[2123] Resolving 247696 paths                       
+[36mINFO[0m[3762] Pushing layer *********/todo/cache:350468314e0e4c3e167619decc74215f4d55aa7c5c9d5316c22a499efad96a0a to cache now 
+[36mINFO[0m[3762] RUN pip install pandas --upgrade             
+[36mINFO[0m[3762] cmd: /bin/bash                               
+[36mINFO[0m[3762] args: [-o pipefail -c pip install pandas --upgrade] 
+[36mINFO[0m[3762] util.Lookup returned: &{Uid:0 Gid:0 Username:root Name:root HomeDir:/root} 
+[36mINFO[0m[3762] performing slow lookup of group ids for root 
+[36mINFO[0m[3762] Running: [/bin/bash -o pipefail -c pip install pandas --upgrade] 
+WARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting pandas
+  Downloading pandas-1.1.2-cp37-cp37m-manylinux1_x86_64.whl (10.5 MB)
+Requirement already satisfied, skipping upgrade: numpy>=1.15.4 in /opt/conda/lib/python3.7/site-packages (from pandas) (1.18.5)
+Requirement already satisfied, skipping upgrade: pytz>=2017.2 in /opt/conda/lib/python3.7/site-packages (from pandas) (2020.1)
+Requirement already satisfied, skipping upgrade: python-dateutil>=2.7.3 in /opt/conda/lib/python3.7/site-packages (from pandas) (2.8.1)
+Requirement already satisfied, skipping upgrade: six>=1.5 in /opt/conda/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas) (1.15.0)
+Installing collected packages: pandas
+  Attempting uninstall: pandas
+    Found existing installation: pandas 1.0.5
+    Uninstalling pandas-1.0.5:
+      Successfully uninstalled pandas-1.0.5
+Successfully installed pandas-1.1.2
+[36mINFO[0m[3777] Taking snapshot of full filesystem...        
+[36mINFO[0m[3779] Resolving 248072 paths                       
+[36mINFO[0m[5273] Pushing layer *********/todo/cache:dff8e74cddcb373f2614aecacb7d6de4e66ba905000fec6143746d0902e4a4fd to cache now 
+[36mINFO[0m[5273] RUN cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py 
+[36mINFO[0m[5273] cmd: /bin/bash                               
+[36mINFO[0m[5273] args: [-o pipefail -c cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py] 
+[36mINFO[0m[5273] util.Lookup returned: &{Uid:0 Gid:0 Username:root Name:root HomeDir:/root} 
+[36mINFO[0m[5273] performing slow lookup of group ids for root 
+[36mINFO[0m[5273] Running: [/bin/bash -o pipefail -c cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py] 
+[36mINFO[0m[5273] Taking snapshot of full filesystem...        
+[36mINFO[0m[5279] Resolving 248072 paths                       
+[36mINFO[0m[6916] ENV TESTDIR=/usr/share/datahub/tests         
+[36mINFO[0m[6916] Pushing layer *********/todo/cache:945899cc6cdedf9a78864e5a0d5b56954c0b38a3cad9c10bb16c2deb5fa175e5 to cache now 
+[36mINFO[0m[6916] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[6916] ARG DATAHUB_TESTDIR=${TESTDIR}/datahub-base-notebook 
+[36mINFO[0m[6916] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[6916] COPY /tests ${DATAHUB_TESTDIR}               
+[36mINFO[0m[6916] Resolving 8 paths                            
+[36mINFO[0m[6916] Taking snapshot of files...                  
+[36mINFO[0m[6916] RUN chown -R 1000:1000 ${DATAHUB_TESTDIR} &&     chmod -R +rwx ${DATAHUB_TESTDIR} 
+[36mINFO[0m[6916] cmd: /bin/bash                               
+[36mINFO[0m[6916] args: [-o pipefail -c chown -R 1000:1000 ${DATAHUB_TESTDIR} &&     chmod -R +rwx ${DATAHUB_TESTDIR}] 
+[36mINFO[0m[6916] Pushing layer *********/todo/cache:640568e7ca11bc4b64ecbacf9809bd957d81aed78f7b98b6bd7f58fdadb368af to cache now 
+[36mINFO[0m[6916] util.Lookup returned: &{Uid:0 Gid:0 Username:root Name:root HomeDir:/root} 
+[36mINFO[0m[6916] performing slow lookup of group ids for root 
+[36mINFO[0m[6916] Running: [/bin/bash -o pipefail -c chown -R 1000:1000 ${DATAHUB_TESTDIR} &&     chmod -R +rwx ${DATAHUB_TESTDIR}] 
+[36mINFO[0m[6916] Taking snapshot of full filesystem...        
+[36mINFO[0m[6919] Resolving 248081 paths                       
+[36mINFO[0m[8628] Pushing layer *********/todo/cache:064abf06b4635006da9e1c4eddd5f7c0bb37a73a1cd6a1cb215408b227c9a497 to cache now 
+[36mINFO[0m[8629] USER jovyan                                  
+[36mINFO[0m[8629] cmd: USER                                    
+[36mINFO[0m[8629] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[8629] WORKDIR /home/jovyan                         
+[36mINFO[0m[8629] cmd: workdir                                 
+[36mINFO[0m[8629] Changed working directory to /home/jovyan    
+[36mINFO[0m[8629] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[8631] error uploading layer to cache: failed to push to destination *********/todo/cache:0eeebdf9c4b5054a336c7c35ab2a3aac5830172f0efeff68b714e785764d863d: HEAD https://index.*********/v2/todo/cache/blobs/sha256:b292824aec4f54e58fae4839348bc2502d0973d897355e0b5c82cb1b8a371a32: unsupported status code 401 
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-9rlbl-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+/bin/sh: line 0: cd: /workspace/source/charts/datahub-base-notebook: No such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-changelog'. The execution of the pipeline has stopped.[0m

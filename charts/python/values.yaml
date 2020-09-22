@@ -47,7 +47,7 @@ service:
   name: datahub-base-notebook
   type: ClusterIP
   externalPort: 80
-  internalPort: 8080
+  internalPort: 8888
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"

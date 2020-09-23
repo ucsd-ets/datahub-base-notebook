@@ -4,7 +4,8 @@ build:
   artifacts:
   - image: ucsd-ets/datahub-base-notebook
     context: .
-    docker: {}
+    docker:
+      noCache: true
   tagPolicy:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'

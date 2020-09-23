@@ -1,5 +1,5 @@
 buildPack: python
-pipelines:
+pipelineConfig:
     release:
       build:
         steps:

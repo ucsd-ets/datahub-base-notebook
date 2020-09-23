@@ -1,1 +1,7 @@
 buildPack: python
+pipelines:
+    release:
+      build:
+        steps:
+        - sh: kubectl exec -it $(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) -n jx-staging -- echo "HELLO XXXXXXXXXXXXXXXXXXXXXXXX"
+          name: test-kubectl

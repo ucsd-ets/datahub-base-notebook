@@ -1,0 +1,33 @@
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600905304.3156903,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ucsd-ets-datahub-base-notebook-vdq67-sn97n[0m
+{"level":"info","ts":1600905322.057792,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/ucsd-ets/datahub-base-notebook.git @ v2019.4.17 in path /workspace/source"}
+{"level":"warn","ts":1600905322.0583255,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600905322.1836681,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ce36c8e3c56d74b1dd44d380dde985cd05adcdd1
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-vdq67-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "*********/ucsd-ets/datahub-base-notebook:2019.4.17": POST https://index.*********/v2/ucsd-ets/datahub-base-notebook/blobs/uploads/: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:ucsd-ets/datahub-base-notebook Type:repository] map[Action:push Class: Name:ucsd-ets/datahub-base-notebook Type:repository]]
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m

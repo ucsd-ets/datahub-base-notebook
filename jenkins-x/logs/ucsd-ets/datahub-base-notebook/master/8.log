@@ -1,0 +1,27 @@
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600893175.6917086,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-ucsd-ets-datahub-base-note-2ztgs-hgdzb[0m
+{"level":"info","ts":1600893191.2417219,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/ucsd-ets/datahub-base-notebook.git @ master in path /workspace/source"}
+{"level":"warn","ts":1600893191.242174,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600893191.4250555,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-ucsd-ets-datahub-base-note-2ztgs-8[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: failed to load project config in dir /workspace/source: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+(root): Additional property pipelines is not allowed
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m

@@ -9,7 +9,9 @@ build:
   tagPolicy:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'
-  local: {}
+  local:
+    concurrency: 0
+    useDockerCLI: true
 deploy:
   kubectl: {}
 profiles:

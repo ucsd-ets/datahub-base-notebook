@@ -2,7 +2,14 @@ buildPack: python
 pipelineConfig:
   pipelines:
     release:
+      preBuild:
+        steps:
+        - sh: skaffold config set --kube-context kubernetes local-cluster true
+          name: skip-push-image
       build:
+        replace: true
         steps:
         - sh: kubectl exec -it $(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) -n jx-staging -- echo "HELLO XXXXXXXXXXXXXXXXXXXXXXXX"
           name: test-kubectl
+        - sh: export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml --cache-artifacts=false
+          name: container-build

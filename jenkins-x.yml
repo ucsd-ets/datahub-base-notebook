@@ -13,5 +13,5 @@ pipelineConfig:
           name: container-build
       promote:
         steps:
-        - sh: export DATAHUB=$(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) && kubectl exec -it $DATAHUB -n jx-staging -- ls /
+        - sh: export DATAHUB=$(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) && kubectl exec -it $DATAHUB -n jx-staging -- bash /usr/share/datahub/tests/datahub-base-notebook/test.sh /
           name: test-kubectl

@@ -6,17 +6,17 @@ echo "DIR $(pwd)"
 
 ### Add any non-selenium tests here
 
-nbgrader export
+# nbgrader export
 
-# Test that the csv file has the necessary headers for Canvas
-HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"
-firstline=$(cut -d ',' -f 1,2,3,4,5 /home/jovyan/grades.csv | head -1)
+# # Test that the csv file has the necessary headers for Canvas
+# HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"
+# firstline=$(cut -d ',' -f 1,2,3,4,5 /home/jovyan/grades.csv | head -1)
 
-if ! [ "$firstline" == "$HEADERS" ]; then
-    exit 1
-else
-    echo "nbgrader export test pass"
-fi
+# if ! [ "$firstline" == "$HEADERS" ]; then
+#     exit 1
+# else
+#     echo "nbgrader export test pass"
+# fi
 
 python3 -m pip install pytest
 pytest $DATASCIENCE_TESTDIR/test-ipykernel_clean.py -v

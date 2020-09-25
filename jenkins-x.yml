@@ -9,7 +9,9 @@ pipelineConfig:
       build:
         replace: true
         steps:
-        - sh: export DATAHUB=$(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) && kubectl exec -it $DATAHUB -n jx-staging -- ls /
-          name: test-kubectl
         - sh: export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml --cache-artifacts=false
           name: container-build
+      promote:
+        steps:
+        - sh: export DATAHUB=$(kubectl get pods -n jx-staging | grep datahub-base | cut -d " " -f1) && kubectl exec -it $DATAHUB -n jx-staging -- ls /
+          name: test-kubectl

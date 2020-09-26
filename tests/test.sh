@@ -6,11 +6,10 @@ echo "DIR $(pwd)"
 ### Add any non-selenium tests here
 nbgrader export
 
-echo "$(ls /home/jovyan)"
-
-
 # Test that the csv file has the necessary headers for Canvas
 HEADERS="Student","ID","SIS User ID","SIS Login ID","Section"
+
+echo "$(ls /home/jovyan)"
 firstline=$(cut -d ',' -f 1,2,3,4,5 /home/jovyan/grades.csv | head -1)
 
 if ! [ "$firstline" == "$HEADERS" ]; then

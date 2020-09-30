@@ -16,8 +16,8 @@ RUN /usr/share/datahub/scripts/install-all.sh && \
 # testing directory
 COPY /tests /usr/share/datahub/tests/datahub-base-notebook
 RUN chown -R 1000:1000 /usr/share/datahub/tests/datahub-base-notebook && \
-    chmod -R +rwx /usr/share/datahub/tests/datahub-base-notebook
-RUN chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
+    chmod -R +rwx /usr/share/datahub/tests/datahub-base-notebook && \
+    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
     chmod -R +r /opt/conda/etc/jupyter/nbconfig
 
 USER jovyan

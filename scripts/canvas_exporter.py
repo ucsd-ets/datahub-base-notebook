@@ -139,7 +139,6 @@ class CsvExportPlugin(ExportPlugin):
 
     """Export grades to Canvas format"""
     def CanvasExport(self, gradebook):
-              
         if self.to == "":
             dest = "canvas_grades.csv"
         else:

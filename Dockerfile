@@ -3,7 +3,8 @@ FROM jupyter/datascience-notebook:python-3.7.6
 USER root
 
 COPY /scripts /usr/share/datahub/scripts/
-COPY /run_jupyter.sh /
+COPY /scripts/run_jupyter.sh /
+COPY /scripts/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
 RUN /usr/share/datahub/scripts/install-all.sh && \
 	pip install pandas --upgrade && \

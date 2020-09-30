@@ -12,12 +12,10 @@ RUN /usr/share/datahub/scripts/install-all.sh && \
 
 # testing directory
 COPY /tests /usr/share/datahub/tests/datahub-base-notebook
-RUN	fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER && \
-    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
-    chmod -R +r /opt/conda/etc/jupyter/nbconfig &&\
 RUN chown -R 1000:1000 /usr/share/datahub/tests/datahub-base-notebook && \
-    chmod -R +rwx /usr/share/datahub/tests/datahub-base-notebook
+    chmod -R +rwx /usr/share/datahub/tests/datahub-base-notebook && \
+    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
+    chmod -R +r /opt/conda/etc/jupyter/nbconfig
 
 USER jovyan
 WORKDIR /home/jovyan

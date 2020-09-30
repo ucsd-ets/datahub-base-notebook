@@ -21,10 +21,10 @@ service:
 resources:
   limits:
     cpu: 0.5
-    memory: 1Gi
+    memory: 500Mi
   requests:
     cpu: 100m
-    memory: 1Gi
+    memory: 128Mi
 ingress:
   enabled: false
 probePath: /

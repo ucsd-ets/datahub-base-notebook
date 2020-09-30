@@ -8,15 +8,14 @@ COPY /scripts/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
 RUN /usr/share/datahub/scripts/install-all.sh && \
 	pip install pandas --upgrade && \
-	# pip install nbgrader==0.6.1 && \
-    fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER && \
-    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
-    chmod -R +r /opt/conda/etc/jupyter/nbconfig &&\
 	cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py
 
 # testing directory
 COPY /tests /usr/share/datahub/tests/datahub-base-notebook
+RUN	fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER && \
+    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
+    chmod -R +r /opt/conda/etc/jupyter/nbconfig &&\
 RUN chown -R 1000:1000 /usr/share/datahub/tests/datahub-base-notebook && \
     chmod -R +rwx /usr/share/datahub/tests/datahub-base-notebook
 

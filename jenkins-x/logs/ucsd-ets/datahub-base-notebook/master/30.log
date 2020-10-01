@@ -1,0 +1,61 @@
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1601581834.5784879,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ucsd-ets-datahub-base-notebook-pqfvh-vx9pf[0m
+{"level":"info","ts":1601581877.9837134,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/ucsd-ets/datahub-base-notebook.git @ v2019.4.35 in path /workspace/source"}
+{"level":"warn","ts":1601581877.9842675,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1601581878.1075737,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+Unable to retrieve container logs for docker://786c25377827a66ed27abed982b835b50da0848e5af6ba9c030c93c2dfe416b8
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8295c5f303ab898371df6b422b6dc54aeacb6dd6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-prebuild-skip-push-image[0m
+set value local-cluster to true for context kubernetes
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+failed to open log file "/var/log/pods/**_ucsd-ets-datahub-base-notebook-pqfvh-30-from-build-pack-b-hg69s_5d74e38d-041f-11eb-b2a9-00505681d4fa/step-build-container-build/0.log": open /var/log/pods/**_ucsd-ets-datahub-base-notebook-pqfvh-30-from-build-pack-b-hg69s_5d74e38d-041f-11eb-b2a9-00505681d4fa/step-build-container-build/0.log: no such file or directory
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/datahub-base-notebook to an unshallow repository
+Generating change log from git ref 6caf47268b676fac594f7b1765e9c50a32f639d0 => 2007c6e748a33016f93557b9845f882308b55c16
+Associating user wesuuu in users.jenkins.io with email wuykimpang@ucsd.edu to git GitProvider user with login wesuuu-0 as emails match
+Adding label jenkins.io/git-github-userid=wesuuu-0 to user wesuuu in users.jenkins.io
+Associating user wesuuu in users.jenkins.io with email wuykimpang@ucsd.edu to git GitProvider user with login wesuuu-0 as emails match
+Adding label jenkins.io/git-github-userid=wesuuu-0 to user wesuuu in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for ucsd-ets/datahub-base-notebook and tag v2019.4.35 so creating a new release
+Updated the release information at https://github.com/ucsd-ets/datahub-base-notebook/releases/tag/v2019.4.35
+generated: /workspace/source/charts/datahub-base-notebook/templates/release.yaml
+Created Release datahub-base-notebook-2019-4-35 resource in namespace **
+Updating PipelineActivity ucsd-ets-datahub-base-notebook-master-30 with version 2019.4.35
+Updated PipelineActivities ucsd-ets-datahub-base-notebook-master-30 with release notes URL: https://github.com/ucsd-ets/datahub-base-notebook/releases/tag/v2019.4.35
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file datahub-base-notebook-2019.4.35.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Unable to retrieve container logs for docker://e7d1f02a0baa66e5e320527f1956fd768e4669238d63db46ded0a587ec67b8e1
+
+Showing logs for build [32mucsd-ets-datahub-base-notebook-pqfvh-30[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-test-kubectl[0m
+Unable to retrieve container logs for docker://a4902435b141cf6645772146436b646cba720906776ce4b74e8647401ba014f0
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-test-kubectl'. The execution of the pipeline has stopped.[0m

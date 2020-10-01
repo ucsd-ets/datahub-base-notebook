@@ -1,2 +1,5 @@
 import os
-os.umask(0o007)
+
+if 'NB_UMASK' in os.environ:
+    os.umask(int(os.environ['NB_UMASK'], 8))
+    

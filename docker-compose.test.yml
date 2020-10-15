@@ -3,7 +3,7 @@ jupyter:
     command: bash -c "/usr/share/datahub/tests/datahub-base-notebook/test.sh && jupyter notebook --ip 0.0.0.0 --allow-root --NotebookApp.token=''"
     user: root
     ports:
-    - "8889:8888"
+    - "8888:8888"
 sut:
     image: ucsdets/notebook-tests:latest
     links:

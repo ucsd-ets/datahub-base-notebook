@@ -15,6 +15,9 @@ RUN /usr/share/datahub/scripts/install-all.sh && \
     chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
     chmod -R +r /opt/conda/etc/jupyter/nbconfig
 
+# make compatible with DSMLP version of jupyterhub
+RUN pip install jupyterhub==0.9.2
+
 # testing directory
 COPY /tests /usr/share/datahub/tests/datahub-base-notebook
 RUN chown -R 1000:1000 /usr/share/datahub/tests/datahub-base-notebook && \

@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:python-3.7.6
+FROM jupyter/datascience-notebook:python-3.8.6
 
 USER root
 
@@ -9,7 +9,7 @@ COPY /scripts/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 RUN /usr/share/datahub/scripts/install-all.sh && \
 	pip install pandas --upgrade && \
 	pip install nltk && \
-	cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.7/site-packages/nbgrader/plugins/export.py && \
+	cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.8/site-packages/nbgrader/plugins/export.py && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER && \
     chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \

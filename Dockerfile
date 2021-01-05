@@ -25,4 +25,3 @@ RUN chown -R 1000:1000 /usr/share/datahub/tests/datahub-base-notebook && \
 
 USER jovyan
 WORKDIR /home/jovyan
-

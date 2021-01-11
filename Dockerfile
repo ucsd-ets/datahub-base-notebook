@@ -6,9 +6,11 @@ COPY /scripts /usr/share/datahub/scripts/
 COPY /scripts/run_jupyter.sh /
 COPY /scripts/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
+# nbconvert downgrade needed for nbgrader to work
 RUN /usr/share/datahub/scripts/install-all.sh && \
 	pip install pandas --upgrade && \
 	pip install nltk && \
+    pip install nbconvert==5.6.1 && \
 	cat /usr/share/datahub/scripts/canvas_exporter.py > /opt/conda/lib/python3.8/site-packages/nbgrader/plugins/export.py && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER && \

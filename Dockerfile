@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:python-3.8.6
+FROM jupyter/datascience-notebook:python-3.7.6
 
 USER root
 

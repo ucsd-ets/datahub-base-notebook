@@ -6,6 +6,7 @@ COPY /scripts /usr/share/datahub/scripts/
 COPY /scripts/run_jupyter.sh /
 COPY /scripts/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
+
 # nbconvert downgrade needed for nbgrader to work
 RUN /usr/share/datahub/scripts/install-all.sh && \
 	pip install pandas --upgrade && \

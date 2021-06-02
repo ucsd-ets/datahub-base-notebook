@@ -14,6 +14,8 @@ apt-get update && \
     screen \
     gnupg \
     htop \
-    wget && \
+    wget \
+    p7zip \
+    p7zip-full && \
 	chmod g-s /usr/bin/screen && \
 	chmod 1777 /var/run/screen

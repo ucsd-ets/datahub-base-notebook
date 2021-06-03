@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -p 8889:8888 -t ucsdets/datahub-base-notebook:latest jupyter notebook --ip 0.0.0.0 --NotebookApp.token=''
+docker run -p 8889:8888 -t ucsdets/datahub-base-notebook:dev jupyter notebook --ip 0.0.0.0 --NotebookApp.token=''

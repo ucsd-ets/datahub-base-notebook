@@ -1,1 +1,1 @@
-docker run -p 8888:8888 -ti ucsdets/datahub-base-notebook:latest /bin/bash
+docker run -p 8888:8888 -ti ucsdets/datahub-base-notebook:dev /bin/bash

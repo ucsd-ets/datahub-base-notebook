@@ -39,3 +39,11 @@ python3 $DATASCIENCE_TESTDIR/addressbook_pb2.py
 if ! python3 ${DATASCIENCE_TESTDIR}/datahub-base-notebook.py; then
     exit 1
 fi
+
+# test 7zip
+if ! 7z; then
+    echo "7zip test failed"
+    exit 1
+else
+    echo "7zip test passed"
+fi
